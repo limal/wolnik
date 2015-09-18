@@ -1,3 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
+    background: #0098d9;
+    color: #ffffff;
+    font-family: 'Catamaran', sans-serif;
+}
+
+header {
+    margin: 2em 0;
+}
+
+h1 {
+    font-weight: 200;
 }
