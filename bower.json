@@ -1,0 +1,6 @@
+{
+    "name": "wolnik",
+    "dependencies": {
+        "jquery": "latest"
+    }
+}
