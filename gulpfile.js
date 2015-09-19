@@ -9,26 +9,27 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     notify = require('gulp-notify'),
     include = require('gulp-include'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    mainBowerFiles = require('main-bower-files');
 
 var onError = function(err) {
     console.log('An error occurred:', err.message);
     this.emit('end');
 }
 
-gulp.task('default', ['scss', 'watch'], function() {
+gulp.task('default', ['scss', 'bowerjs', 'watch'], function() {
 
 });
 
 gulp.task('scss', function() {
     return gulp.src('./scss/style.scss')
-    .pipe(plumber({ errorHandler: onError }))
-    .pipe(sass())
-    .pipe(gulp.dest('./css/'))
-    .pipe(minifycss())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./css/'))
-    .pipe(livereload());
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(sass())
+        .pipe(gulp.dest('./css/'))
+        .pipe(minifycss())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('./css/'))
+        .pipe(livereload());
 });
 
 gulp.task('watch', function() {
@@ -37,4 +38,12 @@ gulp.task('watch', function() {
     gulp.watch('./**/*.html').on('change', function(file) {
         livereload.changed(file);
     });
+});
+
+gulp.task('bowerjs', function() {
+    return
+        gulp.scr(
+        mainBowerFiles()
+        )
+        .pipe(gulp.dest('./js/'));
 });
