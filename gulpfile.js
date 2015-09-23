@@ -1,40 +1,36 @@
 var gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    watch = require('gulp-watch'),
-    livereload = require('gulp-livereload'),
     minifycss = require('gulp-minify-css'),
-    jshint = require('gulp-jshint'),
-    stylish = require('jshint-stylish'),
-    uglify = require('gulp-uglify'),
-    rename = require('gulp-rename'),
-    notify = require('gulp-notify'),
-    include = require('gulp-include'),
+    rename = require("gulp-rename"),
     sass = require('gulp-sass');
+
+var browserSync = require('browser-sync').create();
 
 var onError = function(err) {
     console.log('An error occurred:', err.message);
     this.emit('end');
 }
 
-gulp.task('default', ['scss', 'watch'], function() {
+gulp.task('serve', ['sass'], function() {
 
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+
+    gulp.watch("assets/scss/*.scss", ['sass']);
+    gulp.watch("*.html").on('change', browserSync.reload);
 });
 
-gulp.task('scss', function() {
-    return gulp.src('./scss/style.scss')
-        .pipe(plumber({ errorHandler: onError }))
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function() {
+    return gulp.src("assets/scss/*.scss")
         .pipe(sass())
-        .pipe(gulp.dest('./css/'))
+        .pipe(gulp.dest("assets/css"))
         .pipe(minifycss())
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('./css/'))
-        .pipe(livereload());
+        .pipe(gulp.dest("assets/css"))
+        .pipe(browserSync.stream());
 });
 
-gulp.task('watch', function() {
-    livereload.listen();
-    gulp.watch('./scss/**/*.scss', ['scss']);
-    gulp.watch('./**/*.html').on('change', function(file) {
-        livereload.changed(file);
-    });
-});
+gulp.task('default', ['serve']);
