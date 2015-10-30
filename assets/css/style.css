@@ -22,18 +22,29 @@ header h1 {
 
 header h2 {
   font-weight: 200;
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  margin-bottom: 1.25em; }
 
 header p {
-  margin: 2em 0; }
+  margin: 1em 0 1em 0; }
 
-a.linkedin {
-  background: url("../images/linkedin.png") no-repeat;
-  padding: 0 0 0 40px;
+a {
   line-height: 32px;
   display: inline-block;
   color: #ffffff;
   text-decoration: underline; }
+
+a:hover {
+  color: #ffffff; }
+
+a.linkedin {
+  background: url("../images/linkedin.png") no-repeat;
+  padding: 0 0 0 40px; }
+
+a.ghost {
+  background: url("../images/ghost.png") no-repeat;
+  padding: 0 0 0 86px;
+  line-height: 32px; }
 
 .weather-info {
   font-size: 3em;
