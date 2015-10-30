@@ -87,6 +87,13 @@ a.github {
     animation: fadein 2.5s ease-in;
 }
 
+a.docker {
+    background: url('../images/docker.png') no-repeat;
+    padding: 0 0 0 108px;
+    animation-delay: 1s;
+    animation: fadein 3s ease-in;
+}
+
 .weather-info {
     font-size: 3em;
     line-height: 1em;
