@@ -65,6 +65,12 @@ a.twitter {
   animation-delay: 1s;
   animation: fadein 2s ease-in; }
 
+a.github {
+  background: url("../images/github.png") no-repeat;
+  padding: 0 0 0 74px;
+  animation-delay: 1s;
+  animation: fadein 2.5s ease-in; }
+
 .weather-info {
   font-size: 3em;
   line-height: 1em; }
