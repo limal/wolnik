@@ -46,13 +46,20 @@ a {
     text-decoration: underline;
 }
 
-a:hover {
+a:hover,
+a:active,
+a:visited {
     color: $fg-color;
 }
 
 a.linkedin {
     background: url('../images/linkedin.png') no-repeat;
     padding: 0 0 0 40px;
+}
+
+a.twitter {
+    background: url('../images/twitter.png') no-repeat;
+    padding: 0 0 0 36px;
 }
 
 a.ghost {
