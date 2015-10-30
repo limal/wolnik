@@ -10,8 +10,15 @@ body {
   padding: 1em;
   width: 100%; }
 
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 header {
-  margin: 1em 0 5em 0; }
+  margin: 1em 0 5em 0;
+  animation: fadein 1s ease-in; }
 
 header .container {
   margin: 0 auto; }
@@ -41,16 +48,22 @@ a:visited {
 
 a.linkedin {
   background: url("../images/linkedin.png") no-repeat;
-  padding: 0 0 0 40px; }
-
-a.twitter {
-  background: url("../images/twitter.png") no-repeat;
-  padding: 0 0 0 36px; }
+  padding: 0 0 0 40px;
+  animation-delay: 1s;
+  animation: fadein 1s ease-in; }
 
 a.ghost {
   background: url("../images/ghost.png") no-repeat;
   padding: 0 0 0 86px;
-  line-height: 32px; }
+  line-height: 32px;
+  animation-delay: 1s;
+  animation: fadein 1.5s ease-in; }
+
+a.twitter {
+  background: url("../images/twitter.png") no-repeat;
+  padding: 0 0 0 36px;
+  animation-delay: 1s;
+  animation: fadein 2s ease-in; }
 
 .weather-info {
   font-size: 3em;
