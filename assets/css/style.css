@@ -77,15 +77,8 @@ a.docker {
   animation-delay: 1s;
   animation: fadein 3s ease-in; }
 
-.weather-info {
-  font-size: 3em;
-  line-height: 1em; }
-
-.weather-icon {
-  text-align: right; }
-
-.weather-info .climacon {
-  font-size: 2em; }
-
-.city {
-  font-size: 0.5em; }
+span.available {
+  opacity: 0.5;
+  font-size: 0.5em;
+  position: relative;
+  top: -0.17em; }
