@@ -51,7 +51,9 @@ a.linkedin {
   padding: 0 50px 0 0;
   animation-delay: 1s;
   animation: fadein 1s ease-in;
-  line-height: 32px; }
+  line-height: 32px;
+  position: relative;
+  top: 8px; }
 
 a.ghost {
   background: url("../images/ghost.png") center right no-repeat;
