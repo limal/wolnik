@@ -94,8 +94,11 @@ a.docker {
     animation: fadein 3s ease-in;
 }
 
-span.available {
+.opacity-50 {
     opacity: 0.5;
+}
+
+.available {
     font-size: 0.5em;
     position: relative;
     top: -0.17em;
