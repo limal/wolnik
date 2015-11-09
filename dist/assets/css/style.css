@@ -36,7 +36,7 @@ header p {
   margin: 1em 0 1em 0; }
 
 a {
-  line-height: 32px;
+  line-height: 24px;
   display: inline-block;
   color: #ffffff;
   text-decoration: underline; }
@@ -47,33 +47,34 @@ a:visited {
   color: #ffffff; }
 
 a.linkedin {
-  background: url("../images/linkedin.png") no-repeat;
-  padding: 0 0 0 40px;
+  background: url("../images/linkedin.png") center right no-repeat;
+  padding: 0 50px 0 0;
   animation-delay: 1s;
-  animation: fadein 1s ease-in; }
+  animation: fadein 1s ease-in;
+  line-height: 32px; }
 
 a.ghost {
-  background: url("../images/ghost.png") no-repeat;
-  padding: 0 0 0 86px;
+  background: url("../images/ghost.png") center right no-repeat;
+  padding: 0 96px 0 0;
   line-height: 32px;
   animation-delay: 1s;
   animation: fadein 1.5s ease-in; }
 
 a.twitter {
-  background: url("../images/twitter.png") no-repeat;
-  padding: 0 0 0 36px;
+  background: url("../images/twitter.png") center right no-repeat;
+  padding: 0 46px 0 0;
   animation-delay: 1s;
   animation: fadein 2s ease-in; }
 
 a.github {
-  background: url("../images/github.png") no-repeat;
-  padding: 0 0 0 74px;
+  background: url("../images/github.png") center right no-repeat;
+  padding: 0 84px 0 0;
   animation-delay: 1s;
   animation: fadein 2.5s ease-in; }
 
 a.docker {
-  background: url("../images/docker.png") no-repeat;
-  padding: 0 0 0 108px;
+  background: url("../images/docker.png") center right no-repeat;
+  padding: 0 118px 0 0;
   animation-delay: 1s;
   animation: fadein 3s ease-in; }
 
