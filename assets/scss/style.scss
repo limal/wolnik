@@ -107,4 +107,6 @@ a.docker {
 footer {
     margin: 8em 0 2em 0;
     font-size: 0.75em;
+    animation-delay: 1s;
+    animation: fadein 4.0s ease-in;
 }
