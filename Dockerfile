@@ -5,4 +5,4 @@ RUN mkdir -p /tmp/nginx
 ADD dist /www
 ADD nginx.conf /etc/nginx/
 EXPOSE 80
-CMD exec nginx -g "daemon off;"
+CMD ["nginx", "-g", "'pid /tmp/nginx.pid; daemon off;'"]
