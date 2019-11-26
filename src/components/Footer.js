@@ -15,12 +15,17 @@ export default function Footer() {
           );
         })}
       </ul>
-      <ul className="copyright">
-        <li>&copy; Spectral</li>
-        <li>
-          Design: <a href="http://html5up.net">HTML5 UP</a>
-        </li>
-      </ul>
+      <div className="company">
+        <div className="company__copyright">&copy; Wolnik Ltd</div>
+        <div className="company__address">First Floor<br/>
+        Telecom House<br/>
+        125-135 Preston Road<br/>
+        Brighton, BN1 6AF<br/></div>
+      </div>
+      <div className="design-credits">
+        Design: <a href="http://html5up.net">HTML5 UP</a>
+      </div>
+      <div className="bluetooth-sig-application"></div>
     </footer>
   );
 }

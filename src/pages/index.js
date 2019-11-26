@@ -13,8 +13,11 @@ const IndexPage = () => (
     <section id="banner">
       <div className="inner">
         <h2>{config.heading}</h2>
-        <p>{config.subHeading}</p>
-        <ul className="actions special">
+        <p>
+          Internet of Things / Bluetooth / Apps
+          <br /> consultancy
+        </p>
+        {/* <ul className="actions special">
           <li>
             <Scroll type="id" element="one">
               <a href="/#" className="button primary">
@@ -22,11 +25,11 @@ const IndexPage = () => (
               </a>
             </Scroll>
           </li>
-        </ul>
+        </ul> */}
       </div>
       <Scroll type="id" element="one">
         <a href="#one" className="more">
-          Learn More
+          {/* Learn More */}
         </a>
       </Scroll>
     </section>
@@ -34,20 +37,19 @@ const IndexPage = () => (
     <section id="one" className="wrapper style1 special">
       <div className="inner">
         <header className="major">
-          <h2>
-            Arcu aliquet vel lobortis ata nisl
+          <h2>Complete IoT solution</h2>
+          <p className="description-vision">
+            Taking <b>your vision</b> through
+            <span className="description-vision__process">
+              a project managmement, design, PCB&nbsp;fabrication,
+              ARM&nbsp;firmware, cloud solutions, Bluetooth-enabled
+              Android&nbsp;/&nbsp;iOS &nbsp;native&nbsp;apps
+            </span>
             <br />
-            eget augue amet aliquet nisl cep donec
-          </h2>
-          <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet
-            eleifend
-            <br />
-            fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus
-            ullamcorper.
+            to <b>an end product</b>.
           </p>
         </header>
-        <ul className="icons major">
+        {/* <ul className="icons major">
           <li>
             <span className="icon fa-gem major style1">
               <span className="label">Lorem</span>
@@ -63,11 +65,11 @@ const IndexPage = () => (
               <span className="label">Dolor</span>
             </span>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </section>
 
-    <section id="two" className="wrapper alt style2">
+    {/* <section id="two" className="wrapper alt style2">
       <section className="spotlight">
         <div className="image">
           <img src={pic1} alt="" />
@@ -199,7 +201,7 @@ const IndexPage = () => (
           </li>
         </ul>
       </div>
-    </section>
+    </section> */}
   </Layout>
 );
 
